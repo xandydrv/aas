@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,8 +6,82 @@
     <title>Conservação da Biodiversidade</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .btn-voltar:hover {
+            background-color: #1b5e20;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(46, 125, 50, 0.5);
+        }
+
+        .btn-voltar:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(46, 125, 50, 0.4);
+        }
+
+        .btn-voltar svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-voltar:hover svg {
+            transform: translateX(-3px);
+        }
+
+        
+        @media (max-width: 768px) {
+            .btn-voltar {
+                padding: 10px 18px;
+                font-size: 14px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .btn-voltar span {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-voltar {
+                padding: 8px 12px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <a href="index.html" class="btn-voltar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"></path>
+            <path d="M12 19l-7-7 7-7"></path>
+        </svg>
+        <span>Voltar para Início</span>
+    </a>
+
     <header>
         <nav>
             <div class="logo">BioDiversidade</div>
@@ -415,6 +485,5 @@
         </div>
     </footer>
 
-    
 </body>
 </html>
